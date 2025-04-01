@@ -1,0 +1,23 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "Project to create a WebCrawler",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annanya481/webcrawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Annanya481/webcrawler/issues"
+  },
+  "homepage": "https://github.com/Annanya481/webcrawler#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
