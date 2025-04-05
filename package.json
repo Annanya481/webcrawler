@@ -19,5 +19,9 @@
   "homepage": "https://github.com/Annanya481/webcrawler#readme",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^20.0.3",
+    "node-fetch": "^2.7.0"
   }
 }
