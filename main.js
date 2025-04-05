@@ -1,21 +1,21 @@
 const { crawlPage } = require('./crawl.js')
+const { printReport } = require('./report.js')
 
-// takes in a wesbite as user input and returns a list of all URLs after calling the web crawler function
-function main() {
-    // check for valid input
-    if(process.argv.length < 3) {
-        console.log("no website provided!")
-        process.exit(1)
-    }
-    if(process.argv.length > 3) {
-        console.log("too many arguments provided!")
-        process.exit(1)
-    }
+async function main(){
+  if (process.argv.length < 3){
+    console.log('no website provided')
+  }
+  if (process.argv.length > 3){
+    console.log('too many arguments provided')
+  }
 
-    const baseURL = process.argv[2]
-    console.log(`starting crawl of ${baseURL}...`)
+  const baseURL = process.argv[2]
 
-    crawlPage(baseURL)
+  console.log(`starting crawl of: ${baseURL}...`)
+
+  const pages = await crawlPage(baseURL, baseURL, {})
+
+  printReport(pages)
 }
 
 main()
